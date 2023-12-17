@@ -12,11 +12,11 @@
 
 | PART               | TECHNOLOGIES                                                    |
 | :----------------- | :-------------------------------------------------------------- |
-| `CLIENT`           | **Html, Ejs, Ajax, TailWind-Css, Three.js, LeafLet.js, MapBox** |
+| `Client`           | **Html, Ejs, Ajax, TailWind-Css, Three.js, LeafLet.js, MapBox** |
 | `Server`           | Node.js, MVC, Mongoose, Speech2Text, Chart.js, Mongodb-Atlas    |
 | `API's`            | Nasa Api, Earthquack, Windy, Flood Warning                      |
-| `APPLICATION`      | Flutter, Dart                                                   |
-| `MACHINE LEARNING` | Python, TensorFlow, Algo's                                      |
+| `Application`      | Flutter, Dart                                                   |
+| `Machine Learning` | Python, TensorFlow, Algo's                                      |
 
 ## The problem Disaster Management and Climate Change Stop solves
 
@@ -61,3 +61,11 @@ On the final day, we presented our project to the judges, showcasing our robust 
 Our journey ✈️ from **Pune to Kerala** added an exciting layer to the experience. We connected with like-minded students, immersed ourselves in the local culture, and admired the **natural beauty of Kerala.** From breathtaking beaches 🏖️ to vibrant markets, every moment was filled with memorable experiences. 🌴🌊🌺 #unforgettablejourney
 
 Winning this hackathon is a testament to our dedication, perseverance, and innovative thinking. Being part of this event has provided invaluable learnings, friendships, and cherished memories. Upendra Taral Pratham Pawale Chinmay Beldar 😎💪
+
+## Badges
+
+[![GOOGLE WOOW HACAKTHON](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
