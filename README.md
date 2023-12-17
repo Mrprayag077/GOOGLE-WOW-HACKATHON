@@ -44,9 +44,9 @@ Despite these challenges, the project team remained committed to its goal of emp
 
 ![App Screenshot](./images/GIT/1.webp.png)
 
-![App Screenshot](./images/GIT/2.webp)
+![App Screenshot](./images/GIT/2.jpg)
 
-![App Screenshot](./images/GIT/3.webp)
+![App Screenshot](./images/GIT/3.jpg)
 
 ![App Screenshot](./images/GIT/4.webp)
 
