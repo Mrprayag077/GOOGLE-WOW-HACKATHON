@@ -52,12 +52,12 @@ Despite these challenges, the project team remained committed to its goal of emp
 
 ## Jounery at GOOGLE WOW, KERALA
 
-I am delighted to share with you that our team emerged as the winner of the GOOGLE WOW HACKATHON 2023. 🏆🎉 This achievement brings me great joy and a tremendous sense of pride. The hackathon took place at KMCT College in Kozhikode, Kerala and it was an extraordinary experience that presented us with various challenges and countless opportunities. ✨🚀 GOOGLE
+I am delighted to share with you that our team emerged as the winner of the **GOOGLE WOW HACKATHON 2023. 🏆🎉** This achievement brings me great joy and a tremendous sense of pride. The hackathon took place at KMCT College in Kozhikode, Kerala and it was an extraordinary experience that presented us with various challenges and countless opportunities. ✨🚀
 
-During the hackathon, we choose the topic "Climate Action" 🌍 from the 12 United Nations goals. Our project, titled "Disaster Management and Climate Change," 🌪️🌱 hashtag#disaster focused on stopping, monitoring, and creating awareness through an AI-enabled mobile app and website. We progressed from the first round with around 2000 participants to the final round, where only 36 teams faced a 36-hours coding challenge. 💪 hashtag#finalist
+During the hackathon, we choose the **topic "Climate Action" 🌍 from the 12 United Nations goals.** Our project, titled "Disaster Management and Climate Change," 🌪️🌱 #disaster focused on stopping, monitoring, and creating awareness through an AI-enabled mobile app and website. We progressed from the **first round with around 2000 participants to the final round, where only 36 teams faced a 36-hours coding challenge.** 💪 #finalist
 
 On the final day, we presented our project to the judges, showcasing our robust system consisting of a web platform, user application, and ML model implementation. The judges were highly impressed by our ideas, comprehensive demonstration, and the positive impact we aimed to achieve in climate action.
 
-Our journey ✈️ from Pune to Kerala added an exciting layer to the experience. We connected with like-minded students, immersed ourselves in the local culture, and admired the natural beauty of Kerala. From breathtaking beaches 🏖️ to vibrant markets, every moment was filled with memorable experiences. 🌴🌊🌺 hashtag#unforgettablejourney
+Our journey ✈️ from **Pune to Kerala** added an exciting layer to the experience. We connected with like-minded students, immersed ourselves in the local culture, and admired the **natural beauty of Kerala.** From breathtaking beaches 🏖️ to vibrant markets, every moment was filled with memorable experiences. 🌴🌊🌺 #unforgettablejourney
 
 Winning this hackathon is a testament to our dedication, perseverance, and innovative thinking. Being part of this event has provided invaluable learnings, friendships, and cherished memories. Upendra Taral Pratham Pawale Chinmay Beldar 😎💪
