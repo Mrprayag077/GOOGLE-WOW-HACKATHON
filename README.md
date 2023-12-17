@@ -1,6 +1,6 @@
 # Project Title
 
-Disaster Management and Climate Change Stopping, Monitoring, Awareness through an AI-Enabled Mobile Application and Website Platform.
+### Disaster Management and Climate Change Stopping, Monitoring, Awareness through an AI-Enabled Mobile Application and Website Platform.
 
 ![App Screenshot](./images/GIT/1.1.png)
 
@@ -18,7 +18,7 @@ Disaster Management and Climate Change Stopping, Monitoring, Awareness through a
 | `APPLICATION`      | Flutter, Dart                                |
 | `MACHINE LEARNING` | Python, TensorFlow, Algo's                   |
 
-### The problem Disaster Management and Climate Change Stop solves
+## The problem Disaster Management and Climate Change Stop solves
 
 The "Disaster Management and Climate Change Stopping, Monitoring, Awareness" project addresses several critical problems related to natural disasters and climate change.
 
