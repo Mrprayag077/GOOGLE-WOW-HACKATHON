@@ -10,13 +10,13 @@
 
 ## Tech Stack
 
-| PART               | TECHNOLOGIES                                 |
-| :----------------- | :------------------------------------------- |
-| `CLIENT`           | Html, Ejs, Ajax, TailWind-Css, Three.js      |
-| `Server`           | Node.js, MVC, Speech2Text, Chart.js, Mongodb |
-| `API's`            | Nasa Api, Earthquack, Windy, Flood Warning   |
-| `APPLICATION`      | Flutter, Dart                                |
-| `MACHINE LEARNING` | Python, TensorFlow, Algo's                   |
+| PART               | TECHNOLOGIES                                                 |
+| :----------------- | :----------------------------------------------------------- |
+| `CLIENT`           | Html, Ejs, Ajax, TailWind-Css, Three.js, LeafLet.js, MapBox  |
+| `Server`           | Node.js, MVC, Mongoose, Speech2Text, Chart.js, Mongodb-Atlas |
+| `API's`            | Nasa Api, Earthquack, Windy, Flood Warning                   |
+| `APPLICATION`      | Flutter, Dart                                                |
+| `MACHINE LEARNING` | Python, TensorFlow, Algo's                                   |
 
 ## The problem Disaster Management and Climate Change Stop solves
 
