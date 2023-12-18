@@ -15,18 +15,18 @@ const { response } = require("express");
 var key = "passoward";
 var algo = "aes256";
 var jsonParser = bodyParser.json();
-const cache = require("memory-cache");
-const Queue = require("queue-fifo");
-const rateLimit = require("express-rate-limit");
+// const cache = require("memory-cache");  //make use of redis
+const redis = require("redis");
+const client = redis.createClient();
 
-const limiter = rateLimit({
-  windowMs: 60 * 1000, // 1 minute
-  max: 10,
-  message: "Too many requests from this IP, please try again after a minute",
+// REDIS CONNECT
+client.on("connect", () => {
+  console.log("Connected to Redis");
 });
 
-// Apply the rate limiter to all requests to /safezones
-app.use("/safezones", limiter);
+client.on("error", (err) => {
+  console.error(`Error connecting to Redis: ${err}`);
+});
 
 app.set("view engine", "ejs");
 
@@ -84,43 +84,9 @@ app.get("/surveyform", function (req, res) {
   res.render("formcoum");
 });
 
-// app.get("/safezones", function (req, res) {
-//   // res.send("hello world")
-//   res.render("safezone");
-// });
-
-// In-memory queue
-const requestQueue = new Queue();
-
-// Middleware to check if the user has exceeded the rate limit
-app.use((req, res, next) => {
-  if (limiter(req, res, () => {})) {
-    // If rate limit is exceeded, enqueue the request
-    requestQueue.enqueue({ req, res });
-    console.log("Request enqueued due to rate limit exceeded");
-  } else {
-    // If within rate limit, proceed with the request
-    next();
-  }
+app.get("/safezones", function (req, res) {
+  res.render("safezone");
 });
-
-// Endpoint to process requests
-app.get("/safezones", (req, res) => {
-  // Simulate processing time
-  setTimeout(() => {
-    res.render("safezone");
-  }, 1000); // 1 second
-
-  console.log("Processing request...");
-});
-
-setInterval(() => {
-  if (!requestQueue.isEmpty()) {
-    const { req, res } = requestQueue.dequeue();
-    console.log("Processing enqueued request...");
-    res.render("safezone");
-  }
-}, 10000); // 10 seconds
 
 app.get("/coummunity", function (req, res) {
   // res.send("hello world")
@@ -177,8 +143,6 @@ app.post("/", function (req, res) {
         regname: r11,
         usl: users,
       });
-
-      console.log(users);
     });
   }
 });

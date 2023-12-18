@@ -1,7 +1,5 @@
 git init
 
-git set origin -url 
-
 git branch -name
 
 git add .
@@ -13,4 +11,5 @@ git status
 git push -u origin main
 
 
-//remove- git remote remove origin
+//remove origin- git remote remove origin
+//set origin- git set origin -url 
