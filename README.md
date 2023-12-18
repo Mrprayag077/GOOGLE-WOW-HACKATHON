@@ -17,6 +17,7 @@
 | `API's`            | Nasa Api, Earthquack, Windy, Flood Warning                      |
 | `Application`      | Flutter, Dart                                                   |
 | `Machine Learning` | Python, TensorFlow, Algo's                                      |
+| `Operating System` | Caching Technquie- Least Recent Used                            |
 
 ## The problem Disaster Management and Climate Change Stop solves
 

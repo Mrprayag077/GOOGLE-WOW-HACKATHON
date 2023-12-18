@@ -1,0 +1,16 @@
+git init
+
+git set origin -url 
+
+git branch -name
+
+git add .
+
+git commit -m "pp"
+
+git status 
+
+git push -u origin main
+
+
+//remove- git remote remove origin
