@@ -93,7 +93,7 @@ app.get("/surveyform", function (req, res) {
 const requestQueue = new Queue();
 
 // Middleware to check if the user has exceeded the rate limit
-app.use((req, res, next) => {
+app.use("/safezones", (req, res, next) => {
   if (limiter(req, res, () => {})) {
     // If rate limit is exceeded, enqueue the request
     requestQueue.enqueue({ req, res });
