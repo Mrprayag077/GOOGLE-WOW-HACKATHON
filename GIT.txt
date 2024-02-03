@@ -1,0 +1,18 @@
+git init
+
+git branch -name
+
+git add .
+
+git remote add origin https://github.com/Mrprayag077/GreenMapper_BE_Project
+
+git commit -m "pp"
+
+git status 
+
+git push -u origin main
+
+
+//remove origin- git remote remove origin
+//set origin- git set origin -url 
+//12
