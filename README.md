@@ -12,3 +12,42 @@
 | `Application`      | Flutter, Dart                                                   |
 | `Machine Learning` | Python, TensorFlow, Algo's                                      |
 | `Operating System` | Caching Technquie- Least Recent Used                            |
+
+
+
+## FEATURES
+
+
+GET OVERALL REGIONS DETAILS
+
+--HOMEPAGE
+MAP BASED FOR PREVIOUS DATA
+PREVENTATIONS AND PRECAUTIONS
+
+--CHART
+PIE
+LINE
+DOUGHNUT
+AREA
+SCATTER
+
+
+--EARTHQUAKE
+3D VISILIZATION MAP
+
+--SAFEZONES/SHULLTERS
+NEAR BY SAFE SHULTTERS
+DETAILS OF ZONES
+CONTACT
+
+--SURVEY FORM
+AUTOMATIC ADDRESS FILL
+UPLOAD IMAGE
+LOCALITY QUESTION
+USER INFO 
+SUBMIT
+
+
+--COMMUNITY PAGE
+TO GET NEAR BY DRIVES
+INCREASE VALUNTERRING
