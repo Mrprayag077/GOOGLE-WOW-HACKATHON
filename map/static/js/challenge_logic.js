@@ -289,7 +289,7 @@ function latilong() {
       fillOpacity: 0.8,
     };
 
-    var circleERT = L.circle([latitude, longitude], 5000).addTo(map);
+    // var circleERT = L.circle([latitude, longitude], 5000).addTo(map);
 
     for (let i = 0; i < data.length; i++) {
       var result = (circle.contains([data[i].geometry.coordinates[1], data[i].geometry.coordinates[0]])) ? 'inside' : 'outside';
