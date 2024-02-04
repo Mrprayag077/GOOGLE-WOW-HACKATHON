@@ -500,7 +500,7 @@
                   <span style="font-size: 14px;">Increased by 60%</span><span
                     style="opacity: 0;">xnjn</span><span></span>
 
-                  <a href="http://192.168.200.250:8501" target="_blank"><button class="btn">Look more >></button></a>
+                  <button class="btn">Look more >></button>
                 </div>
               </div>
             </div>
@@ -528,38 +528,35 @@
                             <option value="Assam">Assam</option>
                             <option value="Bihar">Bihar</option>
                             <option value="Chhattisgarh">Chhattisgarh</option>
-                            <option value="Goa">Goa</option>
+                            <!-- <option value="Goa">Goa</option> -->
                             <option value="Gujarat">Gujarat</option>
                             <option value="Haryana">Haryana</option>
-                            <option value="Himachal Pradesh">Himachal Pradesh</option>
-                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <!-- <option value="Himachal Pradesh">Himachal Pradesh</option> -->
+                            <!-- <option value="Jammu and Kashmir">Jammu and Kashmir</option> -->
                             <option value="Jharkhand">Jharkhand</option>
                             <option value="Karnataka">Karnataka</option>
                             <option value="Kerala">Kerala</option>
-                            <option value="Madya Pradesh">Madya Pradesh</option>
+                            <!-- <option value="Madya Pradesh">Madya Pradesh</option> -->
                             <option value="Maharashtra">Maharashtra</option>
                             <option value="Manipur">Manipur</option>
-                            <option value="Meghalaya">Meghalaya</option>
-                            <option value="Mizoram">Mizoram</option>
-                            <option value="Nagaland">Nagaland</option>
-                            <option value="Orissa">Orissa</option>
+                            <!-- <option value="Meghalaya">Meghalaya</option> -->
+                            <!-- <option value="Mizoram">Mizoram</option> -->
                             <option value="Punjab">Punjab</option>
-                            <option value="Rajasthan">Rajasthan</option>
-                            <option value="Sikkim">Sikkim</option>
-                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <!-- <option value="Rajasthan">Rajasthan</option> -->
+                            <!-- <option value="Sikkim">Sikkim</option> -->
                             <option value="Telangana">Telangana</option>
-                            <option value="Tripura">Tripura</option>
-                            <option value="Uttaranchal">Uttaranchal</option>
+                            <!-- <option value="Tripura">Tripura</option> -->
+                            <!-- <option value="Uttaranchal">Uttaranchal</option> -->
                             <option value="Uttar Pradesh">Uttar Pradesh</option>
-                            <option value="West Bengal">West Bengal</option>
-                            <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                            <!-- <option value="West Bengal">West Bengal</option> -->
+                            <!-- <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
                             <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                             <option value="Chandigarh">Chandigarh</option>
                             <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
                             <option value="Daman and Diu">Daman and Diu</option>
                             <option value="Delhi">Delhi</option>
                             <option value="Lakshadeep">Lakshadeep</option>
-                            <option value="Pondicherry">Pondicherry</option>
+                            <option value="Pondicherry">Pondicherry</option> -->
                           </select>
                         </div>
                         <div class="form-group">
@@ -586,7 +583,7 @@
 
           </div>
 
-          <script>
+          <!-- <script>
             window.addEventListener('load', () => {
               // Click the first option in the state dropdown
               document.getElementById('inputState').options[15].selected = true;
@@ -607,7 +604,7 @@
               // }, 2000);
               // });
             });
-          </script>
+          </script> -->
 
           <!-- ------------------------- Map ------------------------------------ -->
           <div class="row">
@@ -667,65 +664,7 @@
                         <!-- <p style="font-size: 16px;" id="selected_region4"></p> -->
 
                         <script>
-                      // const selected";
-
-                      llp1();
-                      function llp1() {
-                        fetch("/map/PREVENTION.json")
-                          .then(response => response.json())
-                          .then(data => {
-                            // add event listener to state select dropdown
-
-                            selectedState = "Maharashtra";
-                            const preventionData = data.preventions.find(prevention => prevention.state === selectedState);
-                            const structure = preventionData.structure;
-
-
-
-                            console.log("hiiiiiiiiiiiiiiiiiiiiiiiiii");
-                            console.log(selectedState);
-
-                            var data_region = preventionData.region;
-                            var data_calamity = preventionData.calamity;
-                            var data_strucutre = preventionData.structure;
-
-
-                            var data_prevention = preventionData.prevention;
-
-                            var data_prc = preventionData.precaution;
-
-                            console.log(data_calamity)
-                            console.log(data_strucutre)
-                            console.log(data_prevention)
-
-                            document.getElementById("selected_region").textContent = data_region;
-                            document.getElementById("selected_region2").textContent = data_calamity;
-                            document.getElementById("selected_region3").textContent = data_strucutre;
-                            document.getElementById("selected_region4").textContent = data_prevention;
-
-                            const preventionList = document.getElementById("selected_region4");
-                            const listItems = data_prevention.map(measure => `<li>${measure}</li>`).join("");
-                            preventionList.innerHTML = `<ul>${listItems}</ul>`;
-
-
-
-                            document.getElementById("selected_region5").textContent = data_prc;
-
-
-
-                            const preventionList1 = document.getElementById("selected_region5");
-                            const listItems1 = data_prc.map(measure => `<li>${measure}</li>`).join("");
-                            preventionList1.innerHTML = `<ul>${listItems1}</ul>`;
-
-
-                            document.getElementById("hidee1").style.display = "none";
-                            document.getElementById("precaution1").style.display = "none";
-
-                          });
-
-
-                      }
-
+                        // const selected";
                           function llp() {
                             fetch("/map/PREVENTION.json")
                               .then(response => response.json())

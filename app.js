@@ -307,6 +307,6 @@ app.post("/chtotable", function (req, res) {
   }
 });
 
-app.listen(process.env.PORT || 8000, function (req, res) {
-  console.log("MAIN UI: http://localhost:8000/");
+app.listen(process.env.PORT || 6000, function (req, res) {
+  console.log(`MAIN UI: http://localhost:${process.env.PORT}/`);
 });
