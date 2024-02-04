@@ -67,6 +67,18 @@ let baseMaps = {
 // });
 
 
+// var greenIcon = L.icon({
+//   iconUrl: 'https://png.pngtree.com/element_our/md/20180516/md_5afbe4e9e49f7.png',
+//   iconSize: [38, 38],
+//   shadowSize: [50, 64],
+//   // iconAnchor: [22, 94],
+//   iconAnchor: [20, 90],
+//   shadowAnchor: [4, 62],
+//   popupAnchor: [-3, -76],
+//   // Set zIndexOffset to ensure the icon appears above other layers
+//   zIndexOffset: 1000
+// });
+
 var greenIcon = L.icon({
   iconUrl: 'https://png.pngtree.com/element_our/md/20180516/md_5afbe4e9e49f7.png',
   iconSize: [38, 38],
@@ -74,8 +86,7 @@ var greenIcon = L.icon({
   iconAnchor: [22, 94],
   shadowAnchor: [4, 62],
   popupAnchor: [-3, -76],
-  // Set zIndexOffset to ensure the icon appears above other layers
-  zIndexOffset: 1000
+  zIndexOffset: 10000  // Set higher zIndex
 });
 
 // Create the three layers for the map
@@ -122,7 +133,9 @@ function latilong() {
     layers: [streets]
   });
 
-  circle = L.circle([latitude, longitude], 5000).addTo(map);
+  // circle = L.circle([latitude, longitude], 5000).addTo(map);
+  circle = L.circle([latitude, longitude], 5000, { interactive: true, zIndex: 1 }).addTo(map);
+  
 
   map.fitBounds(circle.getBounds())
   L.control.layers(baseMaps, overlays).addTo(map);
@@ -297,7 +310,7 @@ function latilong() {
       pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
       },
-      zIndex: 500,
+      zIndex: 1000,
       style: styleInfo,
       onEachFeature: function (feature, layer) {
         layer.bindPopup("Magnitude: " + feature.properties.mag + "<br>Location: " + feature.properties.Shape);
