@@ -114,6 +114,8 @@ function latilong() {
   console.log(longitude);
   console.log(inputDistrict.value);
 
+  document.getElementById("region1").innerHTML = inputDistrict.value;
+
   map = L.map("mapid", {
     center: [latitude, longitude],
     zoom: 10,

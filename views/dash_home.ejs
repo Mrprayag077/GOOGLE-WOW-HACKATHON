@@ -486,14 +486,18 @@
 
                   </div>
                   <h6 style="color: rgb(0, 0, 0);">STATE:
-                    <% usl.forEach( users=>{ %> <%= users.state %>
-                        <% }) %>
+                    &nbsp;&nbsp;
+                    <span id="state1"></span>
+                    <!-- <% usl.forEach( users=>{ %> <%= users.state %>
+                                                                                                                                                        <% }) %> -->
                   </h6>
                   <br />
 
                   <h6 style="opacity:0;">c</h6>
                   <h2 style="color: black;"><b>REGION:
+                    &nbsp;&nbsp;
 
+<span id="region1"></span>
                       <% usl.forEach( users=>{ %> <%= users.reg_name %>
                           <% }) %>
                             <b></h2><br />
@@ -672,6 +676,9 @@
                                 // add event listener to state select dropdown
 
                                 selectedState = inputState.value;
+
+                                document.getElementById("state1").innerHTML = inputState.value;
+
                                 const preventionData = data.preventions.find(prevention => prevention.state === selectedState);
                                 const structure = preventionData.structure;
 
