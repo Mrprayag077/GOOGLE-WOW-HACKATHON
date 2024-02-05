@@ -200,48 +200,48 @@ function latilong() {
 
   var nmajorQuakeData = '/map/flood.json'
 
-  d3.json(nmajorQuakeData).then(function (data) {
-    function styleInfo(feature) {
-      return {
-        opacity: 1,
-        fillOpacity: 1,
-        color: "#000000",
-        border: "#000000",
-        radius: 5,
-        stroke: true,
-        weight: 0.1
-      };
-    }
+  // d3.json(nmajorQuakeData).then(function (data) {
+  //   function styleInfo(feature) {
+  //     return {
+  //       opacity: 1,
+  //       fillOpacity: 1,
+  //       color: "#000000",
+  //       border: "#000000",
+  //       radius: 5,
+  //       stroke: true,
+  //       weight: 0.1
+  //     };
+  //   }
 
-    for (let i = 0; i < data.features.length; i++) {
-      var result = (circle.contains([data.features[i].geometry.coordinates[1], data.features[i].geometry.coordinates[0]])) ? 'inside' : 'outside';
+  //   for (let i = 0; i < data.features.length; i++) {
+  //     var result = (circle.contains([data.features[i].geometry.coordinates[1], data.features[i].geometry.coordinates[0]])) ? 'inside' : 'outside';
 
-      if (result == 'inside') {
-        var near = []
-        near['latitude'] = data.features[i].geometry.coordinates[1];
-        near['longitude'] = data.features[i].geometry.coordinates[0];
-        near['calamity'] = "flood";
-        near['city'] = inputDistrict.value
-        nearby_calamities[j] = near;
-        j++;
+  //     if (result == 'inside') {
+  //       var near = []
+  //       near['latitude'] = data.features[i].geometry.coordinates[1];
+  //       near['longitude'] = data.features[i].geometry.coordinates[0];
+  //       near['calamity'] = "flood";
+  //       near['city'] = inputDistrict.value
+  //       nearby_calamities[j] = near;
+  //       j++;
 
-      }
-    }
+  //     }
+  //   }
 
-    L.geoJson(data, {
-      pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng);
-      },
-      zIndex: 500,
-      style: styleInfo,
-      onEachFeature: function (feature, layer) {
-        layer.bindPopup("<b>Title:</b> " + feature.properties.event_title + "<br><b>Location:</b> " + feature.properties.Shape + "<br><b>Description:</b> " + feature.properties.event_description + "<br><b>Landslide Trigger:</b> " + feature.properties.landslide_trigger + "<br><b>Source Link:</b> " + feature.properties.source_link);
-      }
+  //   L.geoJson(data, {
+  //     pointToLayer: function (feature, latlng) {
+  //       return L.circleMarker(latlng);
+  //     },
+  //     zIndex: 500,
+  //     style: styleInfo,
+  //     onEachFeature: function (feature, layer) {
+  //       layer.bindPopup("<b>Title:</b> " + feature.properties.event_title + "<br><b>Location:</b> " + feature.properties.Shape + "<br><b>Description:</b> " + feature.properties.event_description + "<br><b>Landslide Trigger:</b> " + feature.properties.landslide_trigger + "<br><b>Source Link:</b> " + feature.properties.source_link);
+  //     }
 
-    }).addTo(majorEarthquakes);
+  //   }).addTo(majorEarthquakes);
 
-  });
-  majorEarthquakes.addTo(map);
+  // });
+  // majorEarthquakes.addTo(map);
 
 
 
@@ -330,11 +330,12 @@ function latilong() {
   legend.onAdd = function (map) {
     var div = L.DomUtil.create("div", "info legend"),
       magnitudes = [
-        "EarthQuake", "Landslides", "Floods"],
+        // "EarthQuake", "Landslides", "Floods"],
+        "EarthQuake", "Landslides"],
       colors = [
         "#0000ff",
         "#ff0000",
-        "#000000",
+        // "#000000",
 
       ];
     for (var i = 0; i < magnitudes.length; i++) {
