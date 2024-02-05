@@ -22,55 +22,55 @@
                 </div>
                 <div class="check fas fa-check"></div>
             </div>
-            <div class="step">
+            <!-- <div class="step">
                 <p>Images</p>
+                <div class="bullet">
+                    <span>2</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div> -->
+            <div class="step">
+                <p>Questions</p>
                 <div class="bullet">
                     <span>2</span>
                 </div>
                 <div class="check fas fa-check"></div>
             </div>
             <div class="step">
-                <p>Questions</p>
+                <p>Timeline</p>
                 <div class="bullet">
                     <span>3</span>
                 </div>
                 <div class="check fas fa-check"></div>
             </div>
             <div class="step">
-                <p>Timeline</p>
+                <p>Data</p>
                 <div class="bullet">
                     <span>4</span>
                 </div>
                 <div class="check fas fa-check"></div>
             </div>
             <div class="step">
-                <p>Data</p>
+                <p>Submit</p>
                 <div class="bullet">
                     <span>5</span>
                 </div>
                 <div class="check fas fa-check"></div>
             </div>
-            <div class="step">
-                <p>Submit</p>
-                <div class="bullet">
-                    <span>6</span>
-                </div>
-                <div class="check fas fa-check"></div>
-            </div>
         </div>
         <div class="form-outer">
-            <form action="#">
+            <form action="#" id="form">
                 <div class="page slide-page">
                     <div class="title">Basic Info:</div>
                     <!-- <span>*if wrong fill manually</span> -->
                     <div class="field">
                         <div class="label">State</div>
-                        <input type="text" id="state1" value="11" />
+                        <input type="text" id="state1" name="state" value="11" />
                     </div>
 
                     <div class="field">
                         <div class="label">City</div>
-                        <input type="text" id="city1" required />
+                        <input type="text" id="city1" name="city" required />
                     </div>
 
 
@@ -78,12 +78,12 @@
 
                     <div class="field">
                         <div class="label">Data</div>
-                        <input type="text" id="address1" required />
+                        <input type="text" id="address1" name="address" required />
                     </div>
 
                     <div class="field">
                         <div class="label">Latitude & Longitude </div>
-                        <b> <input type="text" id="longi" required /></b>
+                        <b> <input type="text" id="longi" name="lat&long" required /></b>
                     </div>
 
 
@@ -92,7 +92,7 @@
                     </div>
                 </div>
 
-                <div class="page">
+                <!-- <div class="page">
                     <div class="title">Images:</div>
 
 
@@ -230,34 +230,27 @@
                         <button class="prev-1 prev">Previous</button>
                         <button class="next-1 next">Next</button>
                     </div>
-                </div>
+                </div> -->
                 <div class="page">
                     <div class="title">Questions:</div>
                     <div class="field">
-                        <div class="label">Have you noticed any changes in the availability of natural resources in your
-                            area, such as water, wildlife, or crops?</div>
-
-                        <input type="text" />
+                        <div class="label">Have you noticed any changes in the in your area?</div>
+                        <br />
+                        <br /><br />
+                        <input type="text" name="Question1" value="Yes, gov is trying to reach every milestone and mesaurments" />
                     </div>
-                    <div class="field">
-                        <div class="label">What are the common modes of transportation in this locality?</div>
-                        <br /> <input type="text" />
-                    </div>
-
-
-
-                    <div class="field">
-                        <div class="label"> How do you think the local government can support individuals and
-                            communities in mitigating and adapting to climate change?</div>
-                        <input type="text" />
-                    </div>
-
-
 
                     <div class="field">
                         <div class="label">What are the common modes of transportation in this locality?</div>
-                        <input type="text" />
+                        <input type="text" name="Question2" value="Bus, Train" />
                     </div>
+
+
+                    <div class="field">
+                        <div class="label"> How do you think the local government can support individuals?</div>
+                        <input type="text" name="Question3" value="By provding new schemes" />
+                    </div>
+
                     <div class="field btns">
                         <button class="prev-2 prev">Previous</button>
                         <button class="next-2 next">Next</button>
@@ -285,8 +278,8 @@
 
 
 
-                        <div class="label">Date</div>
-                        <input type="text" required id="datee" disabled />
+                        <div class="label">Name</div>
+                        <input type="text" required id="datee" name="name" />
 
                         <script>
                             const currentDate = new Date();
@@ -294,13 +287,14 @@
 
                             console.log(currentDate.toLocaleDateString('en-US', options));
 
-                            document.getElementById('datee').value = currentDate.toLocaleDateString('en-US', options);
+                                                                    document.getElementById('datee').value = "prayag";
+                                                                    // currentDate.toLocaleDateString('en-US', options);
 
                         </script>
                     </div>
                     <div class="field">
                         <div class="label">Gender</div>
-                        <select required>
+                        <select name="gender" required>
                             <option>Male</option>
                             <option>Female</option>
                             <option>Other</option>
@@ -316,20 +310,22 @@
                     <div class="title">Optional Details:</div>
                     <div class="field">
                         <div class="label">Suggestions</div>
-                        <input type="text" />
+                        <input type="text" name="Suggestions" value="drone mapping required" />
                     </div>
                     <div class="field">
                         <div class="label">Rate your locality 1-10</div>
-                        <input type="text" />
+                        <input type="text" name="Rating" value="10" />
                     </div>
                     <div class="field btns">
                         <button class="prev-5 prev">Previous</button>
-                        <button class="submit">Submit</button>
+                        <button class="submit" id="submit">Submit</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+
+
     <style>
         @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
@@ -652,7 +648,7 @@
         function initMultiStepForm() {
             const progressNumber = document.querySelectorAll(".step").length;
             const slidePage = document.querySelector(".slide-page");
-            const submitBtn = document.querySelector(".submit");
+            const submitBtn = document.querySelector("#submit");
             const progressText = document.querySelectorAll(".step p");
             const progressCheck = document.querySelectorAll(".step .check");
             const bullet = document.querySelectorAll(".step .bullet");
@@ -707,8 +703,8 @@
                 progressText[current - 1].classList.add("active");
                 current += 1;
                 setTimeout(function () {
-                    alert("Your Data has been Successfully Uploaded");
-                    location.reload();
+                    // alert("Your Data has been Successfully Uploaded");
+                    // location.reload();
                 }, 800);
             });
 
@@ -731,6 +727,35 @@
         }
 
     </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzNf_FxpmWM-__pBD9bCY3vXXaE1DNZAoCuDcWecEwr7FoFD9oF-VvRJ-gmnMv4QZ83/exec';
+        const form = document.querySelector('#form')
+        const btn = document.querySelector('#submit')
+
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            btn.disabled = true
+            btn.innerHTML = "Loading..."
+
+            console.log(form)
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    btn.disabled = false;
+                    btn.innerHTML = "Submit";
+                    alert('Your Data has been Successfully Uploaded!', response);
+                    window.location.href = "/";
+
+                })
+            // .catch(error => {
+            //     btn.disabled = false
+            //     btn.innerHTML = "Submit"
+            //     alert('Error!', error.message)
+            // })
+
+        });
+    </script>
+
 </body>
 
 </html>
