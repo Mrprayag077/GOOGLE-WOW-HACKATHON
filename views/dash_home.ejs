@@ -426,12 +426,22 @@
                   </p>
 
                 </div>
-                <div class="course-info"
-                  style="background-image: url('https://thumbs.dreamstime.com/b/maharashtra-state-india-zoomed-pattern-shape-its-capital-isolated-solid-background-distance-scale-region-preview-193798611.jpg');">
+                <div class="course-info" id="stateimg">
                   <div class="progress-container">
 
 
-
+                  
+                    <style>
+                      #stateimg {
+                        background-size: cover;
+                    
+                        /* Set background to no repeat */
+                        background-repeat: no-repeat;
+                    
+                        /* Center the background image */
+                        background-position: center;
+                      }
+                    </style>
                     <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
                     <link rel="stylesheet"
                       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -480,7 +490,7 @@
 
                     </script>
                     <span class="progress-text" style="color: rgb(15, 14, 14);font-size: 12px">
-                      <b> 6/9 Challenges</span><b>
+                      <b> Challenges</span><b>
                       </span>
 
                   </div>
@@ -488,7 +498,7 @@
                     &nbsp;&nbsp;
                     <% usl.forEach( users=>{ %> <%= users.state %>
                         <% }) %>
-                    <!-- <% usl.forEach( users=>{ %> <%= users.state %>
+                          <!-- <% usl.forEach( users=>{ %> <%= users.state %>
                                                                                                                                                         <% }) %> -->
                   </h6>
                   <br />
@@ -496,11 +506,14 @@
                   <h6 style="opacity:0;">c</h6>
                   <h2 style="color: black;"><b>REGION:
                       <span id="region1">select</span>
-                            <b></h2><br />
+                      <b></h2><br />
                   <span style="font-size: 14px;">Track Region Data</span><span
                     style="opacity: 0;">xnjn</span><span></span>
 
-                  <button class="btn">Look more >></button>
+                  <a href="#prev1" style="text-decoration: none;color: inherit;"> <button class="btn">
+                    Look more >>
+                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -522,7 +535,10 @@
                         <div class="form-group">
                           <label for="inputState">State</label>
                           <select class="form-control" id="inputState" onchange="llp()" style="color: black;" disabled>
-                            <option value="<% usl.forEach(users=> {%><%=users.state %><%}) %>" selected><% usl.forEach(users=> {%><%=users.state %><%}) %></option>
+                            <option value="<% usl.forEach(users=> {%><%=users.state %><%}) %>" selected>
+                              <% usl.forEach(users=> {%><%=users.state %>
+                                  <%}) %>
+                            </option>
                           </select>
                         </div>
                         <div class="form-group">
@@ -535,8 +551,9 @@
 
 
                         <br>
-                        <input id="submitID" type="button" value="Submit" class="btn btn-gradient-primary me-2"
+                     <a href="#map1">   <input id="submitID" type="button" value="Submit" class="btn btn-gradient-primary me-2"
                           onclick="latilong()">
+                          </a> 
                       </form>
 
                     </section>
@@ -576,8 +593,8 @@
           <div class="row">
 
             <div class="card">
-              <div class="card-body" style="height: 30rem;">
-                <h3 class="card-title">Map NASA's 10 Years Data:</h3>
+              <div class="card-body" style="height: 30rem;" id="map1">
+                <h2 class="card-title" style="font-size: 25px;">Map NASA's 10 Years Data:</h2>
                 <div id="mapid"></div>
               </div>
             </div>
@@ -613,7 +630,7 @@
                     </div> -->
 
 
-                  <div class="col-md-7 grid-margin stretch-card">
+                  <div class="col-md-7 grid-margin stretch-card" id="prev1">
                     <div class="card">
 
                     </div>
@@ -621,7 +638,7 @@
                   </div>
                   <!-- 
                   ------------------------------------------------------------------------------------------------------ -->
-                  <div class="col-md-12 grid-margin stretch-card" style="color: black;">
+                  <div class="col-md-12 grid-margin stretch-card" style="color: black;" >
                     <div class="card">
                       <div class="card-body">
                         <h4 class="card-title">Region Statistics</h4>
@@ -635,19 +652,99 @@
                             // Set the value of the select element to 'Andra Pradesh'
                             selectElement.value = '<% usl.forEach(users => {%><%=users.state %><%}) %>';
 
+        var selectedState = '<% usl.forEach(users => {%><%=users.state %><%}) %>';
+        console.log("================================================");
+        console.log(selectedState);
+
+        // var state = ; style="background-image: url('https://thumbs.dreamstime.com/b/gujarat-state-india-zoomed-pattern-shape-its-capital-isolated-solid-background-distance-scale-region-preview-labels-193797826.jpg');"
+        var andrapradesh = '../images/state/andrapradesh.jpeg';
+        var assam = '../images/state/assam.jpeg';
+        var gujarat = '../images/state/gujarat.jpeg';
+        var bihar = '../images/state/bihar.jpeg';
+        var Chhattisgarh = "../images/state/Chhattisgarh.jpeg";
+        var Maharashtra = '../images/state/maharashtra.jpeg';
+        var haryana = "../images/state/haryana.jpeg";
+        var himalp = '../images/state/himalp.jpeg';
+        var karanataka = "../images/state/karanataka.jpeg";
+        var telangana = "../images/state/telangana.jpeg";
+        var punjab = "../images/state/punjab.jpeg";
+        var uttarprdesh = '../images/state/uttarprdesh.jpeg';
+        var manipur = "../images/state/manipur.jpeg";
+
+
+        if (selectedState == "Andra Pradesh") {
+          document.getElementById("stateimg").style.backgroundImage = `url(${andrapradesh})`;
+        }
+
+        else if (selectedState == "Assam") {
+          document.getElementById("stateimg").style.backgroundImage = `url(${assam})`;
+        }
+
+        else if (selectedState == "Maharashtra") {
+          document.getElementById("stateimg").style.backgroundImage = `url(${Maharashtra})`;
+        }
+
+        else if (selectedState == "Bihar") {
+          document.getElementById("stateimg").style.backgroundImage = `url(${bihar})`;
+        }
+
+        else if (selectedState == "Chhattisgarh") {
+          document.getElementById("stateimg").style.backgroundImage = `url(${Chhattisgarh})`;
+        }
+
+        else if (selectedState == "Gujarat") {
+          document.getElementById("stateimg").style.backgroundImage = `url(${gujarat})`;
+        }
+
+
+        else if (selectedState == "Haryana") {
+          document.getElementById("stateimg").style.backgroundImage = `url(${haryana})`;
+        }
+
+        else if (selectedState == "Himachal Pradesh") {
+          document.getElementById("stateimg").style.backgroundImage = `url(${himalp})`;
+        }
+
+        else if (selectedState == "Karnataka") {
+          document.getElementById("stateimg").style.backgroundImage = `url(${karanataka})`;
+        }
+
+
+        else if (selectedState == "Manipur") {
+          document.getElementById("stateimg").style.backgroundImage = `url(${manipur})`;
+        }
+
+        else if (selectedState == "Uttar Pradesh") {
+          document.getElementById("stateimg").style.backgroundImage = `url(${uttarprdesh})`;
+        }
+
+        else if (selectedState == "Punjab") {
+          document.getElementById("stateimg").style.backgroundImage = `url(${punjab})`;
+        }
+
+        else if (selectedState == "Telangana") {
+          document.getElementById("stateimg").style.backgroundImage = `url(${telangana})`;
+        }
+
+
+
+        // document.getElementById("stateimg").style.backgroundImage = `url(${Maharashtra})`;
+
+      
+
 
                             var AndraPradesh = ["Guntur", "Kadapa"];
                             var Assam = ["Biswanath"];
-                            var Bihar = ["Begusarai", "Bhagalpur", "Buxar", "Katihar"];
+                            var Bihar = ["Begusarai", "Bhagalpur", "Katihar"];
                             var Chhattisgarh = ["Bijapur", "Bilaspur", "Durg", "Korba", "Koriya",];
                             var Gujarat = ["Ahmedabad", "Rajkot", "Surat", "Vadodara"];
                             var Haryana = ["Faridabad", "Rohtak", "Panipat", "Hisar"];
-                            var HimachalPradesh = ["Bilaspur", "Chamba", "Hamirpur", "Kangra", "Kinnaur", "Kullu", "Lahaul Spiti", "Mandi", "Shimla", "Sirmaur", "Solan", "Una"];
+                            var HimachalPradesh = ["Bilaspur", "Chamba", "Hamirpur", "Mandi", "Shimla", "Kangra", "Kinnaur", "Kullu"];
                             var JammuKashmir = ["Jammu"];
                             var Jharkhand = ["Bokaro", "Dhanbad", "Ranchi", "Jamshedpur"];
                             var Karnataka = ["Bangalore", "Mysore", "Mangalore"];
                             var Kerala = ["Kollam", "Thrissur", "Kochi", "Thiruvananthapuram"];
-                            var Maharashtra = ["Ahmednagar", "Akola", "Amravati", "Aurangabad",  "Jalgaon", "Jalna", "Kolhapur", "Latur", "Mumbai City", "Mumbai Suburban", "Pune","Thane"];
+                                  var Maharashtra = ["Ahmednagar", "Akola", "Amravati", "Aurangabad", "Jalgaon", "Jalna", "Kolhapur", "Latur", "Mumbai City", "Mumbai Suburban", "Pune", "Thane"];
                             var Manipur = ["Imphal"];
                             var Meghalaya = ["East Garo Hills", "East Jaintia Hills", "East Khasi Hills", "North Garo Hills", "Ri Bhoi", "South Garo Hills", "South West Garo Hills", "South West Khasi Hills", "West Garo Hills", "West Jaintia Hills", "West Khasi Hills"];
                             var Mizoram = ["Aizawl"];
@@ -879,7 +976,8 @@
                         </script>
 
 
-                        <p style="font-size: 20px;"> <span>Your Region: &nbsp;</span> <span id="selected_region"> </span>
+                        <p style="font-size: 20px;"> <span>Your Region: &nbsp;</span> <span id="selected_region">
+                          </span>
                         </p>
                         <p style="font-size: 20px;"> <span>calamity: &nbsp;</span> <span id="selected_region2"></span>
                         </p>
@@ -899,7 +997,7 @@
 
                   <!-- ------------Second----------- -->
 
-                  <div class="col-md-6 grid-margin stretch-card" style="color: black;">
+                  <div class="col-md-6 grid-margin stretch-card" style="color: black;" >
                     <div class="card">
                       <div class="card-body">
                         <h4 class="card-title">Precautions</h4>

@@ -131,7 +131,7 @@
                                         <option value="Haryana">Haryana</option>
                                         <option value="Himachal Pradesh">Himachal Pradesh</option>
                                         <option value="Karnataka">Karnataka</option>
-                                        <option value="Manipur">Manipur</option>
+                                        <!-- <option value="Manipur">Manipur</option> -->
                                         <option value="Uttar Pradesh">Uttar Pradesh</option>
                                         <option value="Punjab">Punjab</option>
                                         <option value="Telangana">Telangana</option>
@@ -456,14 +456,14 @@
         <div class="box-container">
 
             <div class="box">
-                <a href="Case1.html">
+                <!-- <a href="Case1.html"> -->
                     <h2>CASE 1</h2>
                     <p>
                         <h3>1996 Amarnath Yatra tragedy</h3>
                     </p>
                     <p>Amarnath Yatra tragedy (1996) is referred to the deaths of over 250 pilgrims in 1996 in Jammu and
                         Kashmir state in India due to bad weather. </p>
-                </a>
+                <!-- </a> -->
 
 
             </div>
@@ -531,13 +531,20 @@
 
             <form action="">
                 <h3>get in touch</h3>
-                <input type="text" placeholder="Name" class="box">
-                <input type="email" placeholder="Email" class="box">
-                <input type="tel" placeholder="Phone" class="box" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-                <textarea name="" placeholder="Message" class="box" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="send message" class="btn">
+                <input type="text" placeholder="Name" class="box" id="name1">
+                <input type="email" placeholder="Email" class="box" id="email1">
+                <input type="tel" placeholder="Phone" class="box" id="phone1">
+                <textarea name="" placeholder="Message" class="box" id="m11" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="btn" onclick="pp1()">
             </form>
+<script>
+    function pp1() {
+        alert("Message Received!");
+        window.location.reload();
 
+        document.getElementById("email1").value = " ";
+    }
+</script>
         </div>
 
     </section>
