@@ -86,44 +86,43 @@ app.get("/surveyform", function (req, res) {
   res.render("formcoum");
 });
 
-app.get("/safezones", function (req, res) {
-  // res.send("hello world")
-  res.render("safezone");
-});
+// app.get("/safezones", function (req, res) {
+//   // res.send("hello world")
+//   res.render("safezone");
+// });
 
 // In-memory queue
 const requestQueue = new Queue();
 
-// // Middleware to check if the user has exceeded the rate limit
-// app.use("/safezones", (req, res, next) => {
-//   if (limiter(req, res, () => { })) {
-//     // If rate limit is exceeded, enqueue the request
-//     requestQueue.enqueue({ req, res });
-//     console.log("Request enqueued due to rate limit exceeded");
-//   } else {
-//     // If within rate limit, proceed with the request
-//     next();
-//   }
-// });
+// Middleware to check if the user has exceeded the rate limit
+app.use("/safezones", (req, res, next) => {
+  if (limiter(req, res, () => { })) {
+    // If rate limit is exceeded, enqueue the request
+    requestQueue.enqueue({ req, res });
+    console.log("Request enqueued due to rate limit exceeded");
+  } else {
+    // If within rate limit, proceed with the request
+    next();
+  }
+});
 
-// // Endpoint to process requests
-// app.get("/safezones", (req, res) => {
-//   // Simulate processing time
-//   setTimeout(() => {
-//     res.render("safezone");
-//   }, 1000); // 1 second
+// Endpoint to process requests
+app.get("/safezones", (req, res) => {
+  // Simulate processing time
+  setTimeout(() => {
+    res.render("safezone");
+  }, 1000); // 1 second
 
-//   console.log("Processing request...");
-// });
+  console.log("Processing request...");
+});
 
-// setInterval(() => {
-//   if (!requestQueue.isEmpty()) {
-//     const { req, res } = requestQueue.dequeue();
-//     console.log("Processing enqueued request...");
-//     res.render("safezone");
-//   }
-// }, 10000); // 10 seconds
-
+setInterval(() => {
+  if (!requestQueue.isEmpty()) {
+    const { req, res } = requestQueue.dequeue();
+    console.log("Processing enqueued request...");
+    res.render("safezone");
+  }
+}, 10000); // 10 seconds
 
 app.get("/coummunity", function (req, res) {
   // res.send("hello world")
@@ -154,9 +153,6 @@ app.get("/earthqq", function (req, res) {
 });
 
 app.post("/", function (req, res) {
-
-  console.log("---------------API / INSIDE-----------------");
-
   var r11 = String(req.body.n33);
 
   const cachedData = cache.get(r11);
@@ -187,9 +183,6 @@ app.post("/", function (req, res) {
       console.log(users);
     });
   }
-
-  console.log("---------------API / OUTSIDE-----------------");
-
 });
 
 app.post("/chartsjsp", function (req, res) {
